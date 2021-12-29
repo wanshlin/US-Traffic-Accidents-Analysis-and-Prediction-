@@ -1,0 +1,32 @@
+Please navigate to the frontend folder, make sure to use npm to install all the dependencies mentioned in the "package.json" file, and enter command "npm run dev", a browser window should pop up shortly afterwards.
+
+We have also stored our final DecisionTreeClassifier model inside of "machinlearning" folder with name: "OverUnderSamplePipelineModel", feel free to use .load() to function to access it and test it out.
+
+All the intermediate results are stored in MongoDB cluster, please contact us for the link if you are interested in the content inside of the cluster.
+
+To test some of the intermediate results, please navigate to the python scripts in separate folders and file names partitioned by functionality and feature.
+
+Here's the Python packages we used, that you need to install those first:
+pyspark
+pandas
+pymongo
+matplotlib
+plotly
+
+The files under "visulization" folder can run with command:
+$ python3 [filename]
+
+Those files under "ETL" folder can run with command:
+$ spark-submit --packages 'org.mongodb.spark:mongo-spark-connector_2.12:3.0.1' [filename]
+address_etl.py
+north_south_etl.py
+poi_etl.py
+time_etl.py
+weather_etl.py
+
+Those files under "machinelearning" folder can run with command:
+$ spark-submit --packages 'org.mongodb.spark:mongo-spark-connector_2.12:3.0.1' [filename]
+prediction_overundersample.py
+severity_prediction.py
+
+Please note some files need to read the original "US_Accidents_Dec20_updated.csv" file in order to perform some cleaning based on it and this should produce "Accident_No_NA.csv" which is needed by many visualization and transformation scripts. "US_Accidents_Dec20_updated.csv" is ignored in gitignore due to its big size. Therefore, please download that file from Kaggle and place it under the root folder, and run "python3 clean_na.py" before other python script.
