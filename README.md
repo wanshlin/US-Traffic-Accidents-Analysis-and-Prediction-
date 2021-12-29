@@ -14,3 +14,9 @@ a working react webapp created by Next.js
 
 **machinelearing folder:**
 stored the codes related to machine learning model as well as models we produced. Please note that the model "OverUnderSamplePipelineModel" is our final model.
+
+**Contributors:**
+Shilin Wang 
+Jiahe Wang 
+Huiyi Zou 
+Zhi Zheng 
